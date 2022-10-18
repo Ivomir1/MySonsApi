@@ -26,11 +26,12 @@ class PostsController extends Controller
      */
     public function create(Post $post)
     {     
-        return auth('sanctum')->user()->currentAccessToken;
-       
-      // if  ($request->user('sanctum')) return "Vytvarim post $post";
-      // else return 'NOt autorized';
+        $user = auth('sanctum')->user()->id;
+        return $user;
+
+        
     }
+
 
     /**
      * Store a newly created resource in storage.

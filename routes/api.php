@@ -15,10 +15,14 @@ use App\Http\Controllers\PostsFromUserController;
 |**
    
 */
+
 Route::get('/postsfromuser/{id}', [PostsFromUserController::class, 'show']);     // ukaze prispevky konkretniho uzivatele
 Route::resource('/posts', PostsController::class); //prace se vsemi prispevky
+Route::get('/test', function() {
+    return auth()->user();
+})->middleware('auth:sanctum');
 
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+/*Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+*/
