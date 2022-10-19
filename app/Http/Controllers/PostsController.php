@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\SavePostRequest;
+
 
 class PostsController extends Controller
 {
@@ -24,12 +27,9 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Post $post)
-    {     
-        $user = auth('sanctum')->user()->id;
-        return $user;
-
-        
+    public function create()
+    {        
+        //frontendi formular na vytvoreni form                        
     }
 
 
@@ -39,9 +39,15 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SavePostRequest $request) //vlastnim savePostrequestem overim vlastnictvi a povinna pole
     {
-        //
+       $post = new Post();  
+       $post->title = $request->title;
+       $post->text = $request->text;
+       $post->user_id = auth()->user()->id;
+       if ($post->save()) return response('Stored', 200); 
+       else return response('Not Stored', 405);    
+        
     }
 
     /**
@@ -64,8 +70,7 @@ class PostsController extends Controller
      */
     public function edit(Post $post)
     {
-       
-        return $post;
+       //
     }
 
     /**
