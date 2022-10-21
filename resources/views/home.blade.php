@@ -16,12 +16,13 @@
 
 
 
-                    <a href='http://laravel.cinovahora.cz:8000/posts'>http://cinovahora.cz:8000/posts</a> //Seznam všech článků<br>
-                    <a href='http://laravel.cinovahora.cz:8000/posts/3'>http://cinovahora.cz:8000/posts/ { id článku }</a> //Detail článku <br>
-                    <a href='http://laravel.cinovahora.cz:8000/postsfromuser/2'>http://cinovahora.cz:8000/postsfromuser/{ id autora }</a> //Články jednoho zvoleného autora (nezabezpečené)<br>
-                    <a href='http://laravel.cinovahora.cz:8000/postsfromuser/show'>http://cinovahora.cz:8000/postsfromuser/show</a> //Články přihlášeného uživatele(zabezpečené)<br>
+                    <a href='http://laravel.cinovahora.cz:8000/posts'>http://laravel.cinovahora.cz:8000/posts</a> //Seznam všech článků<br>
+                    <a href='http://laravel.cinovahora.cz:8000/posts/4'>http://laravel.cinovahora.cz:8000/posts/ { id článku }</a> //Detail článku <br>
+                    <a href='http://laravel.cinovahora.cz:8000/postsfromuser/4'>http://laravel.cinovahora.cz:8000/postsfromuser/{ id autora }</a> //Články jednoho zvoleného autora (nezabezpečené)<br>
+                    <a href='http://laravel.cinovahora.cz:8000/postsfromuser/show'>http://laravel.cinovahora.cz:8000/postsfromuser/show</a> //Články přihlášeného uživatele(zabezpečené)<br>
                     <a href='http://laravel.cinovahora.cz:8000/posts/store?title=aaaaaaaa&text=bbbbb'>http://laravel.cinovahora.cz:8000/posts/store?title=aaaaaaaa&text=bbbbb</a> //Vytvoření článku, proměnné (zabezpečené)<br>
-                    
+                    <a href='http://laravel.cinovahora.cz:8000/register?name=jmeno&email=e@mail.cz&password=as54dfD11&password_confirmation=as54dfD11'>http://laravel.cinovahora.cz:8000/register?name=jmeno&email=e@mail.cz&password=as54dfD11&password_confirmation=as54dfD11</a> //registrace uživatele POST<br>
+                    <a href='http://laravel.cinovahora.cz:8000/login?email=e@mail.cz&password=as54dfD11'>http://laravel.cinovahora.cz:8000/login?email=e@mail.cz&password=as54dfD11</a> //login uzivatele POST<br>
                 </div>
 
                 <div class="card-header">{{ __('UI') }}</div>

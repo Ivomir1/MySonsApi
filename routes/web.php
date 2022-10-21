@@ -23,6 +23,4 @@ Route::get('/postsfromuser/{id}', [PostsFromUserController::class, 'show']);    
 Route::get('/posts/store', [PostsController::class, 'store']);     // ukaze prispevky konkretniho uzivatele
 Route::resource('/posts', PostsController::class); //prace se vsemi prispevky
 
-
 Auth::routes();
-
